@@ -10,14 +10,15 @@
 </head>
 
 <body>
-    <section class="ms-4 mt-3 me-4">
+    <section class="ms-4 mt-3 me-4" style="">
         <div class="bg-success bg-gradient">
-            <marquee direction="" class="">
+            <marquee direction="" class="" style="background-image: linear-gradient(to bottom,rgb(13, 102, 190),rgb(141, 215, 12));">
                 <h2>Welcome to Yatri Seva</h2>
             </marquee>
         </div>
 
-        <div class="collapse navbar-collapse navbar-expand-lg border mt-2" style="display: inline; display: flex; ">
+        <!-- nav bar -->
+        <div class="collapse navbar-collapse navbar-expand-lg" style="display: inline; display: flex; ">
 
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
@@ -37,7 +38,7 @@
                     </a>
                 </li>
 
-                <li>
+                <li class="">
                     <a class="card-subtitle dropdown-item" href="javascript:void(0)">
                         <img class="busyness_img train-info" width="14px"
                             src="https://images.railyatri.in/ry_images_prod/business-info-1594267631.png"
@@ -49,7 +50,7 @@
                             alt="Drparw 1595225122">
                     </a>
                     <!-- 1 -->
-                    <div class="navbar-collapse bg-opacity-50" style=" width: 250px; ">
+                    <div class=" bg-opacity-50" style=" width: 250px; ">
                         <ul class="popup_list">
                             <li>
                                 <a class="card-subtitle dropdown-item"
@@ -156,16 +157,43 @@
                     </div>
                 </li>
             </ul>
+
+            <!-- sign up and log in -->
+            <div class="" style="">
+
+                <button  style="border: none; border-radius: 20px; height: 40px; width: 100px; font-weight: 500; background-color: black;">
+                    <a href=""
+                        class="text-decoration-none" style="color: yellow;"
+                        title="If you don't have account then create new account"
+                        aria-label="If you don't have account then create new account">
+                        Sign Up
+                    </a>
+                </button>
+                <button style="border: none; border-radius: 20px; height: 40px; width: 100px; font-weight: 500; background-color: rgb(0, 0, 0); ">
+                    <a href=""
+                        class="text-decoration-none"
+                        style="color: yellow;"
+                        title="Login to your account" aria-label="Login to your account">
+                        Log in
+                    </a>
+                </button>
+            </div>
         </div>
 
-        <div class="border mt-2" style="">
-            <div class="">
-                <!-- From section -->
-                <input name="boarding_from" id="boarding_from" class="  ui-autocomplete-input" type="text"
-                    autocomplete="on" required="" data-error=".from-error" placeholder="Boarding station..." value="">
-                <label class="from-for" for="boarding_from" style="display: block!important;">From Station</label>
+        <!-- main section -->
+        <div class="col" style="display: flex; background-image: linear-gradient(to right ,rgb(58, 54, 54),rgb(255, 255, 3));">
+            <!-- <div class="" style="z-index: -3; width: 400px; stroke-opacity: 2rem;">
+                <img src="./images/train_img.png" alt="">
+            </div> -->
+ 
+            <div class="" <!-- From section-->
+                <input name="boarding_from" id="boarding_from" class="  ui-autocomplete-input"
+                    style=" border:1px solid black;border-radius: 5px; height: 50px; width: auto;" type="text" autocomplete="on" required=""
+                    data-error=".from-error" placeholder="Boarding station..." value="">
+                <label class="accordion-body " for="boarding_from">From
+                    Station</label>
                 <span class="from-error"></span>
-                <input id="from_city" type="hidden" name="from_code" class="valid" value="" style="display:none;">
+                <input id="from_city" type="hidden" name="from_code" class="valid" value="" style="">
                 <span class="field-divider-1"></span>
                 <span class="clear-field from-city-empty" style="display: none;">x</span>
             </div>
@@ -177,14 +205,20 @@
 
             <div class="ry-floating-input focus-input">
                 <!-- To section -->
-                <input name="boarding_to" id="boarding_to" placeholder="To station..."
-                    class="to-dest stationpicker check-loader ui-autocomplete-input" type="text" autocomplete="off"
-                    data-error=".to-error" value="" onfocusout="deleteHide()" onkeypress="showOnKeyT()"
-                    onkeyup="hideOnKeyT()">
-                <label class="to-for" for="boarding_to" style="display: block!important;">To Station</label>
+                <input name="boarding_to" id="boarding_to" placeholder="Departure station..."
+                    class="to-dest stationpicker check-loader ui-autocomplete-input" type="text"
+                    style="border: 1px solid black; border-radius: 10px; width: auto;height: 50px;" autocomplete="on" data-error=".to-error" value=""
+                    onfocusout="deleteHide()" onkeypress="showOnKeyT()" onkeyup="hideOnKeyT()">
+                <label class="to-for accordion-body row-cols-1" for="boarding_to" style="">To Station</label>
                 <span class="to-error"></span>
                 <input id="to_city" type="hidden" class="valid" name="to_code" value="">
                 <span class="field-divider-2"></span>
+            </div>
+            <!-- search button -->
+            <div class="mt-2 row-cols-1">
+                <button type="search" placeholder="search"
+                    style="width: 20rem; height: 40px; background-color: rgb(37, 87, 213);border-radius: 10px; border: none; font-weight: 600; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"
+                    class="text-light">Search Trains</button>
             </div>
         </div>
 
@@ -208,21 +242,18 @@
             <div class="" style="position: relative; width: 100%; height: 100%; display:inline;">
                 <div class="safety_measure">
                     <a href="http://contents.irctc.co.in/en/stateWiseAdvisory.html" target="_blank">
-                        <img src="https://images.railyatri.in/ry_images_prod/travelguide-1619499658.jpg"
-                            alt="">
+                        <img src="https://images.railyatri.in/ry_images_prod/travelguide-1619499658.jpg" alt="">
                     </a>
                 </div>
                 <div class="safety_measure">
                     <a href="http://contents.irctc.co.in/en/CovidVaccinationInfoEng.pdf" target="_blank">
-                        <img src="https://images.railyatri.in/ry_images_prod/vaccined-1619499669.jpg"
-                            alt="">
+                        <img src="https://images.railyatri.in/ry_images_prod/vaccined-1619499669.jpg" alt="">
                     </a>
                 </div>
                 <div class="safety_measure">
                     <a href="https://www.ecatering.irctc.co.in?utm_source=railyatri_train_ticket_homepage"
                         target="_blank">
-                        <img src="https://images.railyatri.in/ry_images_prod/foodcatering-1619499680.jpg"
-                            alt="">
+                        <img src="https://images.railyatri.in/ry_images_prod/foodcatering-1619499680.jpg" alt="">
                     </a>
                 </div>
                 <div class="safety_measure">
@@ -230,8 +261,123 @@
                         <img src="https://images.railyatri.in/ry_images_prod/pmmsg1-1619499664.jpg" alt="">
                     </a>
                 </div>
-            </>
-        </div>
+                </>
+            </div>
+
+
+            <!-- footer -->
+
+            <div class="" style="background-color: #363636; color: white;">
+                <div class="container no-pad">
+                    <div class="ry-footer-blk">
+                            <div class="row">
+                                <div class="col-sm-2  mt-4">
+                                    <p class="footer_head accordion-body fw-bold">Features</p>
+                                    <ul style="list-style: none;">
+                                        <li><a href="" style="text-decoration: none;">Live
+                                                Train Status</a></li>
+                                        <li><a style="text-decoration: none;" href="">PNR
+                                                Status</a></li>
+                                        <li><a href="" style="text-decoration: none;">
+                                                Train
+                                                Time Table</a></li>
+                                        <li><a href="" style="text-decoration: none;">Seat
+                                                Availability</a></li>
+                                        <li><a style="text-decoration: none;" href="">Train
+                                                between Stations</a></li>
+                                        <li><a href="" style="text-decoration: none;">Arrival
+                                                Departure</a></li>
+                                        <li><a href="" style="text-decoration: none;">Travel
+                                                Advisory</a></li>
+
+                                    </ul>
+                                </div>
+                                <div class="col-sm-2 mt-4" >
+                                    <p class="footer_head accordion-body fw-bold">Book with us</p>
+                                    <ul style="list-style: none;">
+                                        <li><a href="" style="text-decoration: none;">Bus
+                                                Tickets</a></li>
+                                        <li><a href="" style="text-decoration: none;">Train
+                                                Tickets</a></li>
+                                        <li><a href="" style="text-decoration: none;">Food
+                                                on Train</a></li>
+
+                                    </ul>
+                                </div>
+                                <div class="col-sm-2 mt-4" >
+                                    <p class="footer_head fw-bold accordion-body">Info</p>
+                                    <ul style="list-style: none;">
+                                        <li><a href="https://blog.railyatri.in?utm_source=train_ticket_search_dweb_footer"
+                                                style="text-decoration: none;" target="_blank">Blog</a></li>
+                                        <li><a href="" style="text-decoration: none;">About Us</a>
+                                        </li>
+                                        <li><a href="" style="text-decoration: none;">Contact
+                                                Us</a></li>
+                                        <li><a href="/faq?utm_source=train_ticket_search_dweb_footer"
+                                                style="text-decoration: none;">FAQs</a></li>
+                                        <li><a href="/terms-of-uses?utm_source=train_ticket_search_dweb_footer"
+                                                style="text-decoration: none;">Terms of
+                                                Use </a></li>
+                                        <li><a href="/privacy-policy?utm_source=train_ticket_search_dweb_footer "
+                                                style="text-decoration: none;">Privacy</a>
+                                        </li>
+                                        <li><a href="" style="text-decoration: none;">Partners</a>
+                                        </li>
+                                        <li><a href="mailto:advertising@railyatri.in" style="text-decoration: none;">
+                                                Advertise With Us</a>
+                                        </li>
+                                        <li><a href="r" style="text-decoration: none;">Work With
+                                                Us</a></li>
+                                        <li><a href="" style="text-decoration: none;">Media</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-2 no-pad mt-4" style="margin-left:-30px;">
+                                    <p class="fw-bold accordion-body">Our Family</p>
+                                    <ul style="list-style: none;">
+                                        <li><a href="" style="text-decoration: none;" target="_blank">IntrCity
+                                                SmartBus</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-4 pull-right" style="padding-left: 0 ">
+                                    <p class="footer_head" style="color: white;"><img alt=YS logo" width="138px"
+                                            min-height="20px" src="./images/yatri_logo.png">
+                                    </p>
+                                    <p style="text-align:justify">YatriSeva is a one stop solution that furnishes an
+                                        expanse of data-based travel discovery at your disposal. So get connected for an
+                                        inclusive experience of Smart Bus booking, Food on Train service, Train Ticket
+                                        booking &amp; journey information.</p>
+                                    <div class="ftr-social-icon">
+                                        <a class="" href="http://www.facebook.com/railyatri" target="_blank">
+                                            <div class="ryfacebook"></div>
+                                        </a>
+                                        <a href="https://www.youtube.com/channel/UC258cjsQ688s3NCkbN_nZ7g?sub_confirmation=1"
+                                            target="_blank">
+                                            <div class="ysgoogle-plus"></div>
+                                        </a>
+                                        <a href="http://twitter.com/railyatri" target="_blank">
+                                            <div class="ystwitter"></div>
+                                        </a>
+                                        <p class="footer_head">Download App</p>
+                                        <a href="https://play.google.com/store/apps/details?id=com.railyatri.in.mobile&amp;hl=en"
+                                            onclick="gaEventForAppDownload('Google App Store')" target="_blank">
+                                            <div class="rygoogle-play"></div>
+                                        </a>
+                                        <a href="https://itunes.apple.com/in/app/railyatri-pnr-status-live/id1052177547?mt=8"
+                                            onclick="gaEventForAppDownload('Apple iStore')" target="_blank">
+                                            <div class="ysapp-store"></div>
+                                        </a>
+
+                                    </div>
+                                    <div class="col-sm-12 ftr-disclaimer">
+                                        <p>©2024 YatriSeva.in. All Rights Reserved</p>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
     </section>
 
 
